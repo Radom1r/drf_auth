@@ -7,20 +7,20 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "u",
+  "title": "m",
   "description": "Сочнейшие томаты только у меня"
 }
 
 ###
 
 # получение продуктов
-GET {{baseUrl}}/products/
+GET {{baseUrl}}/products/?page=2
 Content-Type: application/json
 
 ###
 
 # обновление продукта
-PATCH {{baseUrl}}/products/7/
+PATCH {{baseUrl}}/products/5/
 Content-Type: application/json
 
 {
@@ -30,7 +30,7 @@ Content-Type: application/json
 ###
 
 # удаление продукта
-DELETE {{baseUrl}}/products/7/
+DELETE {{baseUrl}}/products/5/
 Content-Type: application/json
 
 ###
@@ -46,7 +46,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "hey, адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "t, адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
   "positions": [
     {
       "product": 4,
@@ -64,13 +64,13 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/11/
+PATCH {{baseUrl}}/stocks/13/
 Content-Type: application/json
 
 {
   "positions": [
     {
-      "product": 5,
+      "product": 4,
       "quantity": 100,
       "price": 130.80
     },
@@ -85,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=5
+GET {{baseUrl}}/stocks/?products=4
 Content-Type: application/json
